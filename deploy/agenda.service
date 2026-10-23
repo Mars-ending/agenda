@@ -1,0 +1,17 @@
+[Unit]
+Description=Agenda sync server
+After=network.target
+
+[Service]
+Type=simple
+# 把 ubuntu 换成你的登录用户（须有 /opt/agenda 的读写权限）
+User=ubuntu
+WorkingDirectory=/opt/agenda
+ExecStart=/usr/bin/python3 /opt/agenda/server.py --host 127.0.0.1 --port 8080
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+# 数据库与令牌绝不入库
+agenda.db
+agenda.db-wal
+agenda.db-shm
+backup-*.db
+token.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
